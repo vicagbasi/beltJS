@@ -1,0 +1,73 @@
+
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" [routerLink]="['']">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['newQuestion']">Add Question</a>
+  </li>
+  <li class="nav-item">
+    <form (submit)='logName()' class="form-inline">
+      <div class="form-group mx-sm-3">
+        <input type="text" name="name" class="form-control"
+        id="Name" placeholder="What's your Name?">
+        <button type="submit" class="btn btn-primary">Log In To Play!</button>
+      </div>
+    </form>
+  </li>
+  <li class="nav-item">
+
+    <a class="nav-link" href="#">Logout</a>
+
+  </li>
+</ul>
+
+<!-- ======================NAV BAR========================== -->
+<div class="loggedOut" >
+<!-- *ngIf='!request.session.loggedIn' -->
+</div>
+<div class='container justify-content-center' id='play'>
+  <div class='container justify-content-center'>
+    <a [routerLink]="['triviaGame']"><button type="button" class="btn btn-primary btn-lg">Play</button></a>
+    <p>
+      Click the button above to start the trivia game.
+    </p>
+  </div>
+</div>
+
+  <form>
+    <label for='search'>Search:</label>
+    <input name='search' id='search' type='text'>
+    <input type="submit" style="position: absolute; left: -9999px">
+  </form>
+
+
+<div class='container'>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Score</th>
+        <th scope="col">Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alice</td>
+        <td>2/3</td>
+        <td>66.7%</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>3/3</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>Vic</td>
+        <td>3/3</td>
+        <td>100%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

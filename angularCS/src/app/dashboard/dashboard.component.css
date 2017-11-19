@@ -1,0 +1,21 @@
+#play {
+  text-align: center;
+  background-color: light grey;
+  border: 3px solid black;
+  margin: 3% 0% 3% 0%;
+  padding: 2% 0%;
+  display: flex;
+  justify-content: space-around;
+}
+/*form {
+  float: right;
+}*/
+table {
+  width: 100%;
+  border: 2px solid gray;
+}
+/*#search{
+  text-align: right;
+  float: right;
+  margin-left: 40%;
+}*/

@@ -1,0 +1,56 @@
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" [routerLink]="['']">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['newQuestion']">Add Question</a>
+  </li>
+</ul>
+<div class='container'>
+  <h1 class='display-2'>New Question</h1>
+  <form (submit)='onSubmit()' #formData='ngForm'>
+    <div class="form-group row">
+      <label for='question' class="col-sm-2 col-form-label">Question:</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" id='question'
+        required
+        [(ngModel)]='newQuestion.question'
+        id="question" rows="3"></textarea>
+        <!-- <input name='question' class="form-control"
+        type='text' id='question'
+        required
+        [(ngModel)]='newQuestion.question'> -->
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for='correct' class="col-sm-2 col-form-label">Correct:</label>
+      <div class="col-sm-10">
+        <input name='correct' type='text' id='correct' class="form-control"
+        required
+        [(ngModel)]='newQuestion.correct'>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for='fakeOne' class="col-sm-2 col-form-label">Fake Answer 1:</label>
+      <div class="col-sm-10">
+        <input name='fakeOne' type='text' id='fakeOne' class="form-control"
+        required
+        [(ngModel)]='newQuestion.fakeOne'>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for='fakeTwo' class="col-sm-2 col-form-label">Fake Answer 2:</label>
+      <div class="col-sm-10">
+        <input name='fakeTwo' type='text' id='fakeTwo' class="form-control"
+        required
+        [(ngModel)]='newQuestion.fakeTwo'>
+      </div>
+    </div>
+
+
+    <a [routerLink]="['']"><button type='button'
+      class="btn btn-primary">Cancel</button></a>
+    <button type='submit' class="btn btn-primary">Add Question</button>
+  </form>
+  {{ newQuestion | json }}
+</div>
